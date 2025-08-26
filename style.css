@@ -1,23 +1,115 @@
-body{
+*{
+  box-sizing: border-box;
+}
 
+body{
+  background-color: #255a62;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 40vh;
+}
+
+header{
+  width: 100%;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 0 0 20px 20px;
+  top: 0px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  height: 95px;
+}
+
+h1{
+  font-size: 45px;
+  margin-bottom: 5px;
+  color: #3d7edf;
+  text-align: center;
+  padding: 5px;
+  font-family:cursive;
+}
+
+h2{
+  color: #f0f0f0;
+}
+
+h3{
+  font-size: 21px;
+  color: #ffffff;
+  line-height: 1.2;
+  text-align: center;
+  margin: 15px 0 0px auto;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;         /* Add this */
+  border-color: #2057aa;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height: 260px;
+  padding: 25px;
+  backdrop-filter: blur(8px);
+  border-width: 2px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  border-radius: 8px;   
+      animation: myopacity;
+    animation-duration: 4s;
+}
+
+h4{
+  color: rgb(255, 255, 255);
+}
+
+section{
+  font-size: 20px;
+ overflow: hidden;
+ height: auto;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid gray;
+}
+
+
+.Biography{
+  margin: 25px;
+  padding: 55px;
+  display: flex;
+  text-align: center;
+  backdrop-filter: blur;
+}
+
+
+main{
+  background-image: url('b.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+  margin: 10px;
     padding: 5px;
     font-style: initial;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin: 10;
-    background-image: url('b.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid gray;
+  border-radius: 7px;
 }
 
-@keyframes slide {
-    from{margin-bottom: 0%;}
-    to{margin: top 100%;}
-    100%{transform: rotateZ(360deg);}
-    0%{opacity: 0;}
-    
+footer{
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  margin-top: 20px;
+  padding: 80px;
+  background-color: #5e97ee;
 }
 
 @keyframes myopacity {
@@ -25,69 +117,75 @@ body{
     
 }
 img{
-    border-radius:  20%;
+    border-radius:  30%;
     animation: myopacity;
-    animation-duration: 10s;
-
+    animation-duration: 3s;
+    align-self:lstart;
+    width: 250px;
+    float: left;
 }
 
 ul {
   list-style-position: inside;
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 ul li {
   margin-bottom: 4px; 
-  color: #fffff;
+  color:#ffffff;
 }
 
+a{
+  color: var(--link-color);
+  text-decoration:wavy;
+  }
 
-
-.container {
-    box-sizing: content-box;
-    border: 1px solid;
-    border-color: beige;
-    margin:30px;
-    text-align: center;
-    color: #255a62 ;
-    text-shadow: 0px 0px 1px whitesmoke;
-    background-color:rgb;
-    box-shadow: 0px 7px 2px aliceblue;
-    box-decoration-break:unset;
-    border-radius: 5%;
-    padding: 15px;
-    animation: slide;
-    animation-duration: 6s;
-    animation-delay: 2s;
-
-}
-
-.Hobbies{
-    padding: 350px;
-    text-align: justify;
-}
-
-
-
-
-footer{
-    padding: 20px;
-    font-style: initial;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 10;
-    text-align: center;
-    color: #CBD5E1;
-
-
-}
-
-a {
-  color: #22D3EE;
-  text-decoration: none;
-}
-
-a:hover {
+a:hover{
   text-decoration: underline;
+  color:rgb(57, 30, 208);
+}
+
+nav{
+  display: flex;
+  gap: 65px;
+  font-size: 30px;
+  padding: 20px 0 20px;
+}
+
+.navButton{
+  background-color: #0B1E3A;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 5px;
   text-decoration: none;
+  transform: ease-in-out;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;           
+  scroll-behavior: smooth;    
+  gap: 40px;                  
+  padding: 20px;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselItem1,.carouselItem2,.carouselItem3 {
+  min-width: 300px;           
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.carousel-btn:hover {
+  background: #2057aa;
 }
