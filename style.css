@@ -67,6 +67,10 @@ h4{
 section{
   font-size: 20px;
  overflow: hidden;
+ background-image:url(4k.jpg);
+     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
  height: auto;
   border-radius: 20px;
   padding: 25px;
@@ -167,7 +171,7 @@ nav{
   display: flex;
   overflow-x: auto;           
   scroll-behavior: smooth;    
-  gap: 40px;                  
+  gap: 150px;                  
   padding: 20px;
 }
 
